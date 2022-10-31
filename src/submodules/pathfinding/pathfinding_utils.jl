@@ -3,11 +3,8 @@
 Returns the absolute difference in coordinates between `from` and `to` taking into account
 periodicity of `pathfinder`.
 """
-function position_delta(pathfinder::GridPathfinder{D,true}, from::Dims{D}, to::Dims{D}) where {D} 
-    Δ = abs.(to .- from)
-    Δ = any(Δ .> pathfinder.dims) ? Δ .% pathfinder.dims : Δ    
-    return Δ
-end
+position_delta(pathfinder::GridPathfinder{D,true}, from::Dims{D}, to::Dims{D}) where {D} =
+    min.(abs.(to .- from), size(pathfinder.walkmap) .- abs.(to .- from))
 
 position_delta(pathfinder::GridPathfinder{D,false}, from::Dims{D}, to::Dims{D}) where {D} =
     abs.(to .- from)
