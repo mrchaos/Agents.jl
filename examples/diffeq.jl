@@ -208,7 +208,7 @@ Random.seed!(6549) #hide
 # to the choice of step size.
 # For accurate results, one should never really use this approximate method - although it is
 # almost ubiquitous throughout contemporary research code.
-# For a thorough exposé on this, have a read of [Why you shouldn't use Eulers method to solve ODEs](https://nextjournal.com/ChrisRackauckas/why-you-shouldnt-use-eulers-method-to-solve-odes).
+# For a thorough exposé on this, have a read of [Why you shouldn't use Euler's method to solve ODEs](https://nextjournal.com/ChrisRackauckas/why-you-shouldnt-use-eulers-method-to-solve-odes).
 #
 # ## Coupling DifferentialEquations.jl to Agents.jl
 #
@@ -280,7 +280,7 @@ nothing #hide
 # Users may switch this to any subcomponent of the `DifferentialEquations` ecosystem,
 # or use `DifferentialEquations` directly. Since we don't need other components for this
 # example, we'll stick with the subcomponent but speak in general terms since the
-# packages are interchangable in this context.
+# packages are interchangeable in this context.
 #
 # This implementation uses `import` to explicitly identify which functions are from
 # `DifferentialEquations` and not `Agents`. However, since both `Agents` and
