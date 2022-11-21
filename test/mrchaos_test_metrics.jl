@@ -183,3 +183,5 @@ pmap[1,6] = 0
 # abs(pmap[1,1] - pmap[8,6]) = abs(0-100) = 100
 # PenaltyMap delta_cost = 180
 @test delta_cost(pfinder_2d_p_nm,PenaltyMap(pmap),(1,1),(8,6)) == 180
+
+
